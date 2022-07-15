@@ -1,0 +1,1 @@
+export const EXAMPLE_SCREEN = "EXAMPLE_SCREEN";
