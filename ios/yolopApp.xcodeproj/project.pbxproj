@@ -14,9 +14,12 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-yolopApp-yolopAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-yolopApp-yolopAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		C1835A2149C04FCAB4E9F42B /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64C04B9E9B4C40A7BC6F3372 /* CircularStd-Bold.ttf */; };
-		FFF8182AFF7D4F10B2A98807 /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F154734713EF449994851336 /* CircularStd-Book.ttf */; };
 		BAD8ECCB3FF04FA8985F8F16 /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9CE56854FAE4693AE5F307A /* CircularStd-Medium.ttf */; };
+		C1835A2149C04FCAB4E9F42B /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64C04B9E9B4C40A7BC6F3372 /* CircularStd-Bold.ttf */; };
+		D4F3EB9728866DA500E30D9A /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64C04B9E9B4C40A7BC6F3372 /* CircularStd-Bold.ttf */; };
+		D4F3EB9828866DA500E30D9A /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F154734713EF449994851336 /* CircularStd-Book.ttf */; };
+		D4F3EB9928866DA500E30D9A /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9CE56854FAE4693AE5F307A /* CircularStd-Medium.ttf */; };
+		FFF8182AFF7D4F10B2A98807 /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F154734713EF449994851336 /* CircularStd-Book.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +47,12 @@
 		5709B34CF0A7D63546082F79 /* Pods-yolopApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yolopApp.release.xcconfig"; path = "Target Support Files/Pods-yolopApp/Pods-yolopApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-yolopApp-yolopAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yolopApp-yolopAppTests.debug.xcconfig"; path = "Target Support Files/Pods-yolopApp-yolopAppTests/Pods-yolopApp-yolopAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-yolopApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-yolopApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C04B9E9B4C40A7BC6F3372 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Bold.ttf"; path = "../assets/fonts/CircularStd-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = yolopApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-yolopApp-yolopAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yolopApp-yolopAppTests.release.xcconfig"; path = "Target Support Files/Pods-yolopApp-yolopAppTests/Pods-yolopApp-yolopAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		D9CE56854FAE4693AE5F307A /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Medium.ttf"; path = "../assets/fonts/CircularStd-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		64C04B9E9B4C40A7BC6F3372 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; name = "CircularStd-Bold.ttf"; path = "../assets/fonts/CircularStd-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F154734713EF449994851336 /* CircularStd-Book.ttf */ = {isa = PBXFileReference; name = "CircularStd-Book.ttf"; path = "../assets/fonts/CircularStd-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D9CE56854FAE4693AE5F307A /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; name = "CircularStd-Medium.ttf"; path = "../assets/fonts/CircularStd-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F154734713EF449994851336 /* CircularStd-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Book.ttf"; path = "../assets/fonts/CircularStd-Book.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7769BD32DBB64E8A9D1BF80F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64C04B9E9B4C40A7BC6F3372 /* CircularStd-Bold.ttf */,
+				F154734713EF449994851336 /* CircularStd-Book.ttf */,
+				D9CE56854FAE4693AE5F307A /* CircularStd-Medium.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,17 +167,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		7769BD32DBB64E8A9D1BF80F /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				64C04B9E9B4C40A7BC6F3372 /* CircularStd-Bold.ttf */,
-				F154734713EF449994851336 /* CircularStd-Book.ttf */,
-				D9CE56854FAE4693AE5F307A /* CircularStd-Medium.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -253,6 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F3EB9728866DA500E30D9A /* CircularStd-Bold.ttf in Resources */,
+				D4F3EB9828866DA500E30D9A /* CircularStd-Book.ttf in Resources */,
+				D4F3EB9928866DA500E30D9A /* CircularStd-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,4 @@
-apply plugin: "com.android.application"
-implementation project(':react-native-svg')
+apply plugin: "com.android.application";
 
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
@@ -265,6 +264,8 @@ dependencies {
 
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
+
+    implementation project(':react-native-svg')
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 

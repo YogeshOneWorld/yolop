@@ -2,14 +2,14 @@
     "compilerOptions": {
       "baseUrl": ".",
       "paths": {
-        "@screens/*": ["./src/components/screens/*"],
-        "@common/*": ["./src/components/common/*"],
+        "@screens/*": ["./src/screens/*"],
+        "@components/*": ["./src/components/*"],
         "@navigation/*": ["./src/navigation/StackNavigation/*"],
         "@constants/*": ["./src/constants/*"],
         "@actions/*": ["./src/actions/*"],
         "@utils/*": ["./src/utils/*"],
         "@assets/*": ["./assets/*"],
-
+        "@services/*": ["./src/services/*"],
       }
     }
   }
