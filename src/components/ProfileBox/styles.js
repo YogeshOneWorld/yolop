@@ -1,10 +1,24 @@
+import { sizeToDp } from "@utils/";
 import { COLORS } from "@utils/colors";
-import { HEIGHT, SPACING } from "@utils/constant";
+import { FONTS, HEIGHT, SPACING } from "@utils/constant";
 import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     container: {
-        backgroundColor: COLORS.black,
-        height: HEIGHT.h250,
-        borderRadius: SPACING.sw20
+        height: HEIGHT.h270,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    insideBoxView: {
+        alignItems: 'center'
+    },
+    insideBoxNameText: {
+        fontSize: FONTS.f29,
+        color: COLORS.white,
+        marginTop: SPACING.sh15
+    },
+    insideBoxText: {
+        fontSize: FONTS.f18,
+        color: COLORS.white,
+        marginVertical: SPACING.sh2
     }
 })

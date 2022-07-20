@@ -12,7 +12,8 @@ module.exports = {
             '@actions': ['./src/actions'],
             "@utils": ["./src/utils"],
             "@assets": ["./assets"],
-            "@services": ["./src/services"]
+            "@services": ["./src/services"],
+            "@mock": ["./mock"]
           },
         },
       ],

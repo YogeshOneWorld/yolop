@@ -16,6 +16,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		BAD8ECCB3FF04FA8985F8F16 /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9CE56854FAE4693AE5F307A /* CircularStd-Medium.ttf */; };
 		C1835A2149C04FCAB4E9F42B /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64C04B9E9B4C40A7BC6F3372 /* CircularStd-Bold.ttf */; };
+		D45DBBAD2887BE8300CB4100 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = D45DBBAC2887BE8300CB4100 /* Fonts */; };
 		D4F3EB9728866DA500E30D9A /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64C04B9E9B4C40A7BC6F3372 /* CircularStd-Bold.ttf */; };
 		D4F3EB9828866DA500E30D9A /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F154734713EF449994851336 /* CircularStd-Book.ttf */; };
 		D4F3EB9928866DA500E30D9A /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9CE56854FAE4693AE5F307A /* CircularStd-Medium.ttf */; };
@@ -50,6 +51,7 @@
 		64C04B9E9B4C40A7BC6F3372 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Bold.ttf"; path = "../assets/fonts/CircularStd-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = yolopApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-yolopApp-yolopAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yolopApp-yolopAppTests.release.xcconfig"; path = "Target Support Files/Pods-yolopApp-yolopAppTests/Pods-yolopApp-yolopAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		D45DBBAC2887BE8300CB4100 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		D9CE56854FAE4693AE5F307A /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Medium.ttf"; path = "../assets/fonts/CircularStd-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F154734713EF449994851336 /* CircularStd-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Book.ttf"; path = "../assets/fonts/CircularStd-Book.ttf"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		13B07FAE1A68108700A75B9A /* yolopApp */ = {
 			isa = PBXGroup;
 			children = (
+				D45DBBAC2887BE8300CB4100 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -268,6 +271,7 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				C1835A2149C04FCAB4E9F42B /* CircularStd-Bold.ttf in Resources */,
+				D45DBBAD2887BE8300CB4100 /* Fonts in Resources */,
 				FFF8182AFF7D4F10B2A98807 /* CircularStd-Book.ttf in Resources */,
 				BAD8ECCB3FF04FA8985F8F16 /* CircularStd-Medium.ttf in Resources */,
 			);

@@ -4,13 +4,12 @@ import { HEIGHT, SPACING, WIDTH } from "@utils/constant";
 
 export default StyleSheet.create({
     container: {
-        backgroundColor: COLORS.white,
-        width: WIDTH.w0,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         height: HEIGHT.h45,
-        paddingHorizontal: SPACING.sw15
+        paddingHorizontal: SPACING.sw15,
+        backgroundColor: COLORS.white
     },
     leftSideView: {
         width: "20%"
