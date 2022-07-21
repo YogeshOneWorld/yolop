@@ -9,17 +9,17 @@ export default StyleSheet.create({
         alignItems: 'center',
         height: HEIGHT.h45,
         paddingHorizontal: SPACING.sw15,
-        backgroundColor: COLORS.white
+        backgroundColor: COLORS.tranparent
     },
     leftSideView: {
-        width: "20%"
+        width: "12%",
     },
     centerView: {
-        width: "50%",
-        textAlign: 'center'
+        width: "75%",
+        textAlign: 'center',
     },
     rightSideView: {
-        width: "20%",
+        width: "12%",
         alignItems: 'flex-end'
     }
 })

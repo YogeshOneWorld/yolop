@@ -3,9 +3,9 @@ import React from 'react'
 import styles from './styles'
 
 
-export default function UserImage({ icon, editIcon, editIconbgColor }) {
+export default function UserImage({ icon, editIcon, editIconbgColor, border }) {
     return (
-        <View style={styles.background}>
+        <View style={border ? styles.lightBackground : styles.darkBackground}>
             {icon}
             {editIcon &&
                 <View style={[styles.editImage, { backgroundColor: editIconbgColor }]}>

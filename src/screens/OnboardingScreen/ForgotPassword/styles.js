@@ -1,12 +1,11 @@
-import { StyleSheet } from "react-native";
 import { COLORS } from "@utils/colors";
+import { SPACING, WIDTH } from "@utils/constant";
 import { APP_FONTS } from "@utils/fonts";
-import { FONTS, SPACING, WIDTH } from "@utils/constant";
-
+import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: COLORS.primary,
+        backgroundColor: COLORS.primary
     },
     contentContainer: {
         flexGrow: 1,
@@ -18,12 +17,8 @@ export default StyleSheet.create({
         fontSize: 30,
         fontFamily: APP_FONTS.CircularStdMedium
     },
-    checkBox: {
-        marginRight: SPACING.sh6
-    },
-    termsView: {
-        width: WIDTH.w250,
-        marginBottom: SPACING.sh15
-    
+    heading: {
+        width: WIDTH.w200,
+        alignSelf: 'center',
     }
 })

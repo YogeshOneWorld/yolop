@@ -1,13 +1,22 @@
 import { HEIGHT, SPACING } from "@utils/constant";
 import { StyleSheet } from "react-native";
  export default StyleSheet.create({
-    background: {
+  lightBackground: {
         padding: 10,
         borderStyle: 'dashed',
         borderRadius: HEIGHT.h140,
         borderWidth: 2,
         borderColor: '#fff',
+        alignSelf: 'center'
     },
+    darkBackground: {
+      padding: 10,
+      borderStyle: 'dashed',
+      borderRadius: HEIGHT.h140,
+      borderWidth: 2,
+      borderColor: '#000',
+      alignSelf: 'center'
+  },
     image: {
         height: HEIGHT.h144,
         width: HEIGHT.h144

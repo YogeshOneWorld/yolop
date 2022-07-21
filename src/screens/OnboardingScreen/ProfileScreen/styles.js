@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "@utils/colors";
 import { APP_FONTS } from "@utils/fonts";
-import { FONTS, SPACING, WIDTH } from "@utils/constant";
+import { FONTS, HEIGHT, SPACING, WIDTH } from "@utils/constant";
 
 export default StyleSheet.create({
     container: {
@@ -18,12 +18,9 @@ export default StyleSheet.create({
         fontSize: 30,
         fontFamily: APP_FONTS.CircularStdMedium
     },
-    checkBox: {
-        marginRight: SPACING.sh6
-    },
-    termsView: {
-        width: WIDTH.w250,
-        marginBottom: SPACING.sh15
-    
+    userLogo: {
+        height: HEIGHT.h144,
+         width: HEIGHT.h144,
+         borderRadius: HEIGHT.h144 / 2,
     }
 })

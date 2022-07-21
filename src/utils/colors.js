@@ -1,6 +1,6 @@
 export const COLORS = {
      tranparent: "transparent",
-     primary: "#103EA8",
+     primary: "#545454;",
      primaryBlack: "#555555",
      primaryWhite: "#3E3E3E",
      white: "#fff",
@@ -10,8 +10,8 @@ export const COLORS = {
      yellow: "#E3B306",
      black: "#000000",
      lightText: "#979797",
-     darkText: "#2B2A2A"
-
-
+     darkText: "#2B2A2A",
+     gray: " #DCDCDC",
+     
 
 }

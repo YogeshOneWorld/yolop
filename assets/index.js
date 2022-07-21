@@ -1,1 +1,2 @@
-export const profileBg = require('./profileBoxBgImage.png');
+export const profileBg = require('./images/profileBoxBgImage.png');
+export const userImg = require('./images/user.png')

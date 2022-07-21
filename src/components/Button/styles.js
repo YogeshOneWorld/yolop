@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "@utils/colors";
-import { WIDTH, HEIGHT, SPACING } from "@utils/constant";
+import { WIDTH, HEIGHT, SPACING, FONTS } from "@utils/constant";
+import { APP_FONTS } from "@utils/fonts";
 
 export default StyleSheet.create({
 
@@ -30,27 +31,20 @@ export default StyleSheet.create({
   },
 
   mediumText: {
-    fontSize: 16,
-    lineHeight: 24,
+    fontSize: FONTS.f15,
+    lineHeight: 20,
+    fontFamily: APP_FONTS.CircularStdBold,
+    color: COLORS.white
   },
   largeText: {
-    fontSize: 18,
+    fontSize: FONTS.f18,
     lineHeight: 24,
+    fontFamily: APP_FONTS.CircularStdBold,
+    color: COLORS.white
   },
 
-  primaryText: {
-    color: COLORS.white,
-  },
-  outlineText: {
-    color: COLORS.primary_main,
-  },
-  icon: {
-    width: 18,
-    height: 18,
-    marginRight: 15,
-    resizeMode: "contain",
-  },
   buttonContainer: {
     backgroundColor: COLORS.yellow,
+    marginVertical: SPACING.sh15
   },
 });

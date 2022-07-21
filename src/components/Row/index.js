@@ -3,8 +3,8 @@ import { View } from "react-native";
 
 import { styles } from "./styles";
 
-const Row = ({ children, style }) => (
-  <View style={[styles.container, style]}>{children}</View>
+const Row = ({ children, style, spaces }) => (
+  <View style={[spaces ? styles.withSpace : styles.withoutSpace, style]}>{children}</View>
 );
 
 export default Row;
