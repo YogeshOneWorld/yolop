@@ -2,6 +2,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ExampleAction } from './redux/action/ExampleAction'
+import LoginScreen from './component/screen/LoginScreen'
 
 export default function ExampleScreen() {
   const dispatch = useDispatch()
@@ -12,11 +13,7 @@ export default function ExampleScreen() {
 
 
   return (
-    <TouchableOpacity
-    style={{height: 40, backgroundColor: 'red', width: '60%', justifyContent: 'center', alignItems: 'center'}}
-    onPress={()=> dispatch(ExampleAction("yogesh"))}>
-      <Text>ExampleScreen 1</Text>
-    </TouchableOpacity>
+   <LoginScreen />
   )
 }
 
