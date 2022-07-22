@@ -1,4 +1,4 @@
-import {SafeAreaView, Text, View, ScrollView, Alert} from 'react-native';
+import {SafeAreaView, Text, View, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import styles from './styles';
 import Header from '@components/Header';

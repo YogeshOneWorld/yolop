@@ -48,7 +48,7 @@ const SignUpScreen = ({navigation}) => {
           error={emailError}
         />
         <CustomTextInput
-          label={'Email address'}
+          label={'Email or Phone Number'}
           icon
           onChangeText={text => setPassword(text)}
           placeholder="Email or Phone Number"
