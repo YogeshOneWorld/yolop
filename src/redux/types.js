@@ -1,1 +1,1 @@
-export const EXAMPLE_SCREEN = "EXAMPLE_SCREEN";
+export const EXAMPLE_SCREEN = 'EXAMPLE_SCREEN';
