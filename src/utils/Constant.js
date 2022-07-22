@@ -1,8 +1,8 @@
-import { Dimensions } from "react-native";
+import {Dimensions} from 'react-native';
 
 export const DIMENSIONS = {
-  WINDOW_HEIGHT: Dimensions.get("window").height,
-  WINDOW_WIDTH: Dimensions.get("window").width,
+  WINDOW_HEIGHT: Dimensions.get('window').height,
+  WINDOW_WIDTH: Dimensions.get('window').width,
 };
 
 export const SPACING = {
@@ -16,16 +16,18 @@ export const SPACING = {
   sh6: DIMENSIONS.WINDOW_HEIGHT / 120,
   sh15: DIMENSIONS.WINDOW_HEIGHT / 54,
   sh20: DIMENSIONS.WINDOW_HEIGHT / 50,
+  sh70: DIMENSIONS.WINDOW_HEIGHT / 30,
+  sh90: DIMENSIONS.WINDOW_HEIGHT / 20,
 };
 
 export const WIDTH = {
   w0: DIMENSIONS.WINDOW_WIDTH,
+  w50: DIMENSIONS.WINDOW_WIDTH / 6,
   w80: DIMENSIONS.WINDOW_WIDTH / 4.5,
   w155: DIMENSIONS.WINDOW_WIDTH / 2.2,
   w200: DIMENSIONS.WINDOW_WIDTH / 1.5,
   w250: DIMENSIONS.WINDOW_WIDTH / 1.3,
   w300: DIMENSIONS.WINDOW_WIDTH / 1.15,
-
 };
 
 export const HEIGHT = {
@@ -40,13 +42,8 @@ export const HEIGHT = {
 };
 
 export const FONTS = {
-f12:  DIMENSIONS.WINDOW_HEIGHT * 0.014,
-f15:  DIMENSIONS.WINDOW_HEIGHT * 0.018,
-f18:  DIMENSIONS.WINDOW_HEIGHT * 0.020,
-f29:  DIMENSIONS.WINDOW_HEIGHT * 0.034,
-
-
-
-}
-
-
+  f12: DIMENSIONS.WINDOW_HEIGHT * 0.014,
+  f15: DIMENSIONS.WINDOW_HEIGHT * 0.018,
+  f18: DIMENSIONS.WINDOW_HEIGHT * 0.02,
+  f29: DIMENSIONS.WINDOW_HEIGHT * 0.029,
+};

@@ -8,7 +8,6 @@ module.exports = {
             "@screens": ["./src/screens"],
             "@components": ["./src/components"],
             '@navigation': ['./src/navigation/StackNavigation'],
-            '@constants': ['./src/constants'],
             '@actions': ['./src/actions'],
             "@utils": ["./src/utils"],
             "@assets": ["./assets"],

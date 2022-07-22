@@ -1,17 +1,22 @@
-import { Text, View } from 'react-native'
-import React from 'react'
-import styles from './styles'
+import {Text, View, TouchableOpacity} from 'react-native';
+import React from 'react';
+import styles from './styles';
 
-
-
-export default function Header({ icon, title, menubar, headingStyle, style }) {
+export default function Header({
+  icon,
+  title,
+  menubar,
+  headingStyle,
+  style,
+  onBackIconPress,
+}) {
   return (
     <View style={[styles.container, style]}>
-      <View style={styles.leftSideView}>{icon}</View>
+      <TouchableOpacity style={styles.leftSideView} onPress={onBackIconPress}>
+        {icon}
+      </TouchableOpacity>
       <Text style={[headingStyle, styles.centerView]}>{title}</Text>
-      <View style={styles.rightSideView}>
-        {menubar}
-      </View>
+      <View style={styles.rightSideView}>{menubar}</View>
     </View>
-  )
+  );
 }

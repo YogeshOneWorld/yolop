@@ -1,11 +1,6 @@
-import { StyleSheet } from 'react-native'
-import React from 'react'
-import StackNavigation from '@navigation/'
+import React from 'react';
+import StackNavigation from '@navigation/';
 
 export default function App() {
-  return (
-    <StackNavigation />
-  )
+  return <StackNavigation />;
 }
-
-const styles = StyleSheet.create({})

@@ -1,4 +1,4 @@
 export const NAVIGATION_SCREENS = {
-    LOGIN: 'Login',
-    REGISTRATION: 'Registration',
-  };
+  LOGIN: 'Login',
+  REGISTRATION: 'Registration',
+};

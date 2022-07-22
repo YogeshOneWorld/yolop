@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "@utils/colors";
-import { HEIGHT, SPACING, WIDTH } from "@utils/constant";
+import { FONTS, HEIGHT, SPACING, WIDTH } from "@utils/constant";
+import { APP_FONTS } from "@utils/fonts";
 
 export default StyleSheet.create({
     container: {
@@ -17,9 +18,12 @@ export default StyleSheet.create({
     centerView: {
         width: "75%",
         textAlign: 'center',
+        fontSize: FONTS.f29,
+        fontFamily: APP_FONTS.CircularStdMedium,
+        color: COLORS.secondaryBlack
     },
     rightSideView: {
         width: "12%",
         alignItems: 'flex-end'
-    }
+    },
 })

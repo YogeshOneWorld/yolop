@@ -42,17 +42,17 @@ export const isValidEmail = emailAddress => {
   return regEmail.test(emailAddress);
 };
 
-
-
 export const showInternetError = () => {
   SnackBarService.show('internet is not working');
 };
 
-export const withNetConnection = callback => async (...args) => {
-  const {isConnected} = await fetch();
-  if (!isConnected) {
-    showInternetError();
-    return;
-  }
-  return callback(...args);
-};
+export const withNetConnection =
+  callback =>
+  async (...args) => {
+    const {isConnected} = await fetch();
+    if (!isConnected) {
+      showInternetError();
+      return;
+    }
+    return callback(...args);
+  };

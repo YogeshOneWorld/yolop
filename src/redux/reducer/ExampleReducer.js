@@ -1,16 +1,16 @@
-import { EXAMPLE_SCREEN } from '../types';
+import {EXAMPLE_SCREEN} from '../types';
 const initialState = {
-data: null
+  data: null,
 };
 const ExampleReducer = (state = initialState, action) => {
-switch(action.type) {
-case EXAMPLE_SCREEN:
-return {
-...state,
-data:action.payload
+  switch (action.type) {
+    case EXAMPLE_SCREEN:
+      return {
+        ...state,
+        data: action.payload,
+      };
+    default:
+      return state;
+  }
 };
-default:
-return state;
-}
-}
 export default ExampleReducer;
