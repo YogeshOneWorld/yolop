@@ -15,6 +15,7 @@
 #import <ReactCommon/RCTTurboModuleManager.h>
 
 #import <react/config/ReactNativeConfig.h>
+#import "RNSplashScreen.h"
 
 @interface AppDelegate () <RCTCxxBridgeDelegate, RCTTurboModuleManagerDelegate> {
   RCTTurboModuleManager *_turboModuleManager;

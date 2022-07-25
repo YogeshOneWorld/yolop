@@ -7,23 +7,39 @@ import SignUpScreen from '@screens/OnboardingScreen/SignupScreen';
 import ForgotPassword from '@screens/OnboardingScreen/ForgotPassword';
 import OtpScreen from '@screens/OnboardingScreen/OtpScreen';
 import CreatePassword from '@screens/OnboardingScreen/CreatePassword';
+import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
 
 const Stack = createStackNavigator();
 
-export default function StackNavigation() {
+export default function StackNavigation({navigationRef}) {
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
-        initialRouteName="Login"
+        initialRouteName={NAVIGATION_SCREENS.LOGIN}
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
-        <Stack.Screen name="RegisterProfile" component={RegisterProfile} />
-        <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-        <Stack.Screen name="OtpScreen" component={OtpScreen} />
-        <Stack.Screen name="CreatePassword" component={CreatePassword} />
+        <Stack.Screen name={NAVIGATION_SCREENS.LOGIN} component={LoginScreen} />
+        <Stack.Screen
+          name={NAVIGATION_SCREENS.SIGNUP}
+          component={SignUpScreen}
+        />
+        <Stack.Screen
+          name={NAVIGATION_SCREENS.REGISTRATION}
+          component={RegisterProfile}
+        />
+        <Stack.Screen
+          name={NAVIGATION_SCREENS.FORGOT_PASSWORD}
+          component={ForgotPassword}
+        />
+        <Stack.Screen
+          name={NAVIGATION_SCREENS.OTP_SCREEN}
+          component={OtpScreen}
+        />
+        <Stack.Screen
+          name={NAVIGATION_SCREENS.CREATE_PASSWORD}
+          component={CreatePassword}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

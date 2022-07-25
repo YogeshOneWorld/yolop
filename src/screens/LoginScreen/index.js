@@ -2,7 +2,6 @@ import {SafeAreaView, Text, View, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import styles from './styles';
 import Header from '@components/Header';
-import BackIcon from '@assets/backIcon.svg';
 import {sizeToDp} from '@utils/';
 import SignInLogo from '@assets/signInLogo.svg';
 import CustomTextInput from '@components/TextInput';
@@ -11,6 +10,8 @@ import Button from '@components/Button';
 import {COLORS} from '@utils/colors';
 import Row from '@components/Row';
 import {commonStyle} from '@utils/commonStyle';
+import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
+import NavigationService from '@services/NavigationService';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -61,7 +62,9 @@ const LoginScreen = ({navigation}) => {
           </Row>
           <Text
             style={commonStyle.commonMediumText}
-            onPress={() => navigation.navigate('ForgotPassword')}>
+            onPress={() =>
+              navigation.navigate(NAVIGATION_SCREENS.FORGOT_PASSWORD)
+            }>
             Forgot Password ?
           </Text>
         </Row>
@@ -73,7 +76,7 @@ const LoginScreen = ({navigation}) => {
             Don’t have an account ?{' '}
           </Text>
           <Text
-            onPress={() => navigation.navigate('SignUp')}
+            onPress={() => NavigationService.reset(NAVIGATION_SCREENS.SIGNUP)}
             style={commonStyle.commonDecorationLintText}>
             Sign up
           </Text>
