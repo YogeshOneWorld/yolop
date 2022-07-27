@@ -2,7 +2,6 @@ import {SafeAreaView, Text, View, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import styles from './styles';
 import Header from '@components/Header';
-import BackIcon from '@assets/backIcon.svg';
 import {sizeToDp} from '@utils/';
 import SignInLogo from '@assets/signInLogo.svg';
 import CustomTextInput from '@components/TextInput';
@@ -10,6 +9,8 @@ import Button from '@components/Button';
 import {COLORS} from '@utils/colors';
 import Row from '@components/Row';
 import {commonStyle} from '@utils/commonStyle';
+import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
+import {navigateTo} from '@utils/navigateTo';
 
 const SignUpScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -19,7 +20,7 @@ const SignUpScreen = ({navigation}) => {
   const [passwordError, setPasswordError] = useState(false);
 
   const onButtonPress = () => {
-    navigation.navigate('RegisterProfile');
+    navigateTo(navigation, NAVIGATION_SCREENS.REGISTRATION);
   };
 
   return (
@@ -77,12 +78,7 @@ const SignUpScreen = ({navigation}) => {
           <Text
             style={[commonStyle.commonSmallText, {color: COLORS.primaryBlack}]}>
             By clicking “Signup” you agree to Yolop’s
-            <Text
-              onPress={() => navigation.navigate('Login')}
-              style={commonStyle.commonSmallText}>
-              {' '}
-              Terms of use{' '}
-            </Text>
+            <Text style={commonStyle.commonSmallText}> Terms of use </Text>
             <Text
               style={[
                 commonStyle.commonSmallText,
@@ -90,12 +86,7 @@ const SignUpScreen = ({navigation}) => {
               ]}>
               or
             </Text>
-            <Text
-              onPress={() => navigation.navigate('Login')}
-              style={commonStyle.commonSmallText}>
-              {' '}
-              Privacy Policy
-            </Text>
+            <Text style={commonStyle.commonSmallText}> Privacy Policy</Text>
           </Text>
         </View>
         <Row style={commonStyle.centerText}>
@@ -104,7 +95,7 @@ const SignUpScreen = ({navigation}) => {
             Already have an account ?
           </Text>
           <Text
-            onPress={() => navigation.navigate('Login')}
+            onPress={() => navigateTo(navigation, NAVIGATION_SCREENS.LOGIN)}
             style={commonStyle.commonDecorationLintText}>
             {' '}
             Sign in

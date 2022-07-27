@@ -11,18 +11,20 @@ import {COLORS} from '@utils/colors';
 import Row from '@components/Row';
 import {commonStyle} from '@utils/commonStyle';
 import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
-import NavigationService from '@services/NavigationService';
+import {navigateTo} from '@utils/navigateTo';
+import {userLoginRequest} from './action';
+import {useDispatch} from 'react-redux';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState(false);
+  const dispatch = useDispatch();
 
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState(false);
 
   const onButtonPress = () => {
-    // navigation.navigate("RegisterProfile")
-    alert('processing');
+    dispatch(userLoginRequest('yogesh mandyal'));
   };
 
   return (
@@ -63,7 +65,7 @@ const LoginScreen = ({navigation}) => {
           <Text
             style={commonStyle.commonMediumText}
             onPress={() =>
-              navigation.navigate(NAVIGATION_SCREENS.FORGOT_PASSWORD)
+              navigateTo(navigation, NAVIGATION_SCREENS.FORGOT_PASSWORD)
             }>
             Forgot Password ?
           </Text>
@@ -76,7 +78,7 @@ const LoginScreen = ({navigation}) => {
             Don’t have an account ?{' '}
           </Text>
           <Text
-            onPress={() => NavigationService.reset(NAVIGATION_SCREENS.SIGNUP)}
+            onPress={() => navigateTo(navigation, NAVIGATION_SCREENS.SIGNUP)}
             style={commonStyle.commonDecorationLintText}>
             Sign up
           </Text>

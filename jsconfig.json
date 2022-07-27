@@ -5,7 +5,7 @@
         "@screens/*": ["./src/screens/*"],
         "@components/*": ["./src/components/*"],
         "@navigation/*": ["./src/navigation/StackNavigation/*"],
-        "@actions/*": ["./src/actions/*"],
+        "@redux/*": ["./src/redux/*"],
         "@utils/*": ["./src/utils/*"],
         "@assets/*": ["./assets/*"],
         "@services/*": ["./src/services/*"],
