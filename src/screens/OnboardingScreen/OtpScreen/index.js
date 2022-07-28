@@ -13,6 +13,8 @@ import styles from './styles';
 import BackIcon from '@assets/backIcon.svg';
 import Button from '@components/Button';
 import {commonStyle} from '@utils/commonStyle';
+import {navigateTo} from '@utils/navigateTo';
+import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
 
 const OtpScreen = ({navigation}) => {
   const [pins, setPins] = useState('');
@@ -20,7 +22,7 @@ const OtpScreen = ({navigation}) => {
   let textInput = useRef(null);
 
   const onButtonPress = () => {
-    navigation.navigate('CreatePassword');
+    navigateTo(navigation, NAVIGATION_SCREENS.CREATE_PASSWORD);
   };
 
   const onChangeText = text => {
@@ -44,7 +46,7 @@ const OtpScreen = ({navigation}) => {
       <Header
         icon={<BackIcon height={sizeToDp(18.89)} width={sizeToDp(17.44)} />}
         title="Forgot Password"
-        onBackIconPress={() => navigation.goBack()}
+        onBackIconPress={() => navigateTo(navigation)}
       />
       <KeyboardAvoidingView style={styles.main}>
         <View>

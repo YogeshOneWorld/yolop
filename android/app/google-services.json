@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "940709772365",
+    "project_id": "yolop-b22d6",
+    "storage_bucket": "yolop-b22d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940709772365:android:1a20069f73140b2b893004",
+        "android_client_info": {
+          "package_name": "com.yolopapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940709772365-hqd4phhg6e1rhub9vcs9pfln7qr449oh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAraUgFHazlPTV9P2N2DN0T4_sTlt_pHXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940709772365-hqd4phhg6e1rhub9vcs9pfln7qr449oh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

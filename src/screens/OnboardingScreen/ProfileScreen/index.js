@@ -10,6 +10,8 @@ import EditIcon from '@assets/editIcon.svg';
 import {COLORS} from '@utils/colors';
 import CustomTextInput from '@components/TextInput';
 import Button from '@components/Button';
+import {navigateTo} from '@utils/navigateTo';
+import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
 
 const RegisterProfile = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -19,14 +21,14 @@ const RegisterProfile = ({navigation}) => {
   const [passwordError, setPasswordError] = useState(false);
 
   const onButtonPress = () => {
-    navigation.navigate('Login');
+    navigateTo(navigation, NAVIGATION_SCREENS.LOGIN);
   };
   return (
     <SafeAreaView style={styles.container}>
       <Header
         icon={<BackIcon height={sizeToDp(18.89)} width={sizeToDp(17.44)} />}
         title="Your Profile"
-        onBackIconPress={() => navigation.goBack()}
+        onBackIconPress={() => navigateTo(navigation)}
       />
       <ScrollView
         contentContainerStyle={styles.contentContainer}

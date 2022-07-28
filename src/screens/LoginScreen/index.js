@@ -2,7 +2,6 @@ import {SafeAreaView, Text, View, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import styles from './styles';
 import Header from '@components/Header';
-import BackIcon from '@assets/backIcon.svg';
 import {sizeToDp} from '@utils/';
 import SignInLogo from '@assets/signInLogo.svg';
 import CustomTextInput from '@components/TextInput';
@@ -11,17 +10,21 @@ import Button from '@components/Button';
 import {COLORS} from '@utils/colors';
 import Row from '@components/Row';
 import {commonStyle} from '@utils/commonStyle';
+import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
+import {navigateTo} from '@utils/navigateTo';
+import {userLoginRequest} from './action';
+import {useDispatch} from 'react-redux';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState(false);
+  const dispatch = useDispatch();
 
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState(false);
 
   const onButtonPress = () => {
-    // navigation.navigate("RegisterProfile")
-    alert('processing');
+    dispatch(userLoginRequest('yogesh mandyal'));
   };
 
   return (
@@ -61,7 +64,9 @@ const LoginScreen = ({navigation}) => {
           </Row>
           <Text
             style={commonStyle.commonMediumText}
-            onPress={() => navigation.navigate('ForgotPassword')}>
+            onPress={() =>
+              navigateTo(navigation, NAVIGATION_SCREENS.FORGOT_PASSWORD)
+            }>
             Forgot Password ?
           </Text>
         </Row>
@@ -73,7 +78,7 @@ const LoginScreen = ({navigation}) => {
             Don’t have an account ?{' '}
           </Text>
           <Text
-            onPress={() => navigation.navigate('SignUp')}
+            onPress={() => navigateTo(navigation, NAVIGATION_SCREENS.SIGNUP)}
             style={commonStyle.commonDecorationLintText}>
             Sign up
           </Text>

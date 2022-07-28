@@ -13,6 +13,8 @@ import Row from '@components/Row';
 import {commonStyle} from '@utils/commonStyle';
 import CustomAlert from '@components/AlertBox';
 import Success from '@assets/sucess_tick.svg';
+import {navigateTo} from '@utils/navigateTo';
+import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
 
 const CreatePassword = ({navigation}) => {
   const [password, setPassword] = useState('');
@@ -28,14 +30,14 @@ const CreatePassword = ({navigation}) => {
 
   const onSuccess = () => {
     setIsModalVisible(!isModalVisible);
-    navigation.navigate('Login');
+    navigateTo(navigation, NAVIGATION_SCREENS.LOGIN);
   };
   return (
     <SafeAreaView style={styles.container}>
       <Header
         icon={<BackIcon height={sizeToDp(18.89)} width={sizeToDp(17.44)} />}
         title="Create Password"
-        onBackIconPress={() => navigation.goBack()}
+        onBackIconPress={() => navigateTo(navigation)}
       />
       <ScrollView
         contentContainerStyle={styles.contentContainer}

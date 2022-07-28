@@ -8,9 +8,7 @@ import React from 'react';
 import {name as appName} from './app.json';
 import {Provider as StoreProvider} from 'react-redux';
 import {Provider as PaperProvider} from 'react-native-paper';
-import configureStore from './src/store';
-
-const store = configureStore();
+import {store} from '@redux/configureStore';
 
 const RNRedux = () => (
   <StoreProvider store={store}>

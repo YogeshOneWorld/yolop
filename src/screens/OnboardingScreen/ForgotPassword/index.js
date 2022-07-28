@@ -1,4 +1,4 @@
-import {SafeAreaView, Text, View, ScrollView, Alert} from 'react-native';
+import {SafeAreaView, Text, View, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import styles from './styles';
 import Header from '@components/Header';
@@ -11,13 +11,15 @@ import ConfirmButton from '@components/ConfirmMailButton';
 import Mail from '@assets/mail.svg';
 import ChatIcon from '@assets/chatbubble.svg';
 import {HEIGHT} from '@utils/constant';
+import {navigateTo} from '@utils/navigateTo';
+import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
 
 const ForgotPassword = ({navigation}) => {
   const [isSelectPhone, setIsSelectPhone] = useState(false);
   const [isSelectEmail, setIsSelectEmail] = useState(false);
 
   const onButtonPress = () => {
-    navigation.navigate('OtpScreen');
+    navigateTo(navigation, NAVIGATION_SCREENS.OTP_SCREEN);
   };
   const onSelectAction = () => {
     if (isSelectEmail === false) {
@@ -35,7 +37,7 @@ const ForgotPassword = ({navigation}) => {
       <Header
         icon={<BackIcon height={sizeToDp(18.89)} width={sizeToDp(17.44)} />}
         title="Forgot Password"
-        onBackIconPress={() => navigation.goBack()}
+        onBackIconPress={() => navigateTo(navigation)}
       />
       <ScrollView
         contentContainerStyle={styles.contentContainer}

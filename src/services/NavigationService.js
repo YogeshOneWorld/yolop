@@ -1,4 +1,4 @@
-import {NavigationActions, StackActions} from 'react-navigation';
+import {CommonActions, StackActions} from '@react-navigation/native';
 
 let navigator;
 
@@ -8,7 +8,7 @@ const setTopLevelNavigator = navigatorRef => {
 
 const navigate = (routeName, params) => {
   navigator.dispatch(
-    NavigationActions.navigate({
+    CommonActions.navigate({
       routeName,
       params,
     }),
@@ -17,7 +17,7 @@ const navigate = (routeName, params) => {
 
 const goBack = routeName => {
   navigator.dispatch(
-    NavigationActions.back(
+    CommonActions.back(
       routeName && {
         key: routeName,
       },
@@ -27,9 +27,9 @@ const goBack = routeName => {
 
 const reset = routeName => {
   navigator.dispatch(
-    StackActions.reset({
-      index: 0,
-      actions: [NavigationActions.navigate({routeName})],
+    CommonActions.reset({
+      index: 1,
+      actions: [CommonActions.navigate({routeName})],
     }),
   );
 };
