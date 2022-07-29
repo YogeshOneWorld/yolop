@@ -5,4 +5,5 @@ export const NAVIGATION_SCREENS = {
   FORGOT_PASSWORD: 'ForgotPassword',
   OTP_SCREEN: 'OtpScreen',
   CREATE_PASSWORD: 'CreatePassword',
+  NOTIFICATION: 'NotificationScreen',
 };

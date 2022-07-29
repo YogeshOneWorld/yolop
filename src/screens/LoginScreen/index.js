@@ -24,7 +24,8 @@ const LoginScreen = ({navigation}) => {
   const [passwordError, setPasswordError] = useState(false);
 
   const onButtonPress = () => {
-    dispatch(userLoginRequest('yogesh mandyal'));
+    // navigateTo(navigation, NAVIGATION_SCREENS.NOTIFICATION, 1, true);
+    navigateTo(navigation, NAVIGATION_SCREENS.NOTIFICATION);
   };
 
   return (

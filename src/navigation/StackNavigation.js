@@ -8,6 +8,7 @@ import ForgotPassword from '@screens/OnboardingScreen/ForgotPassword';
 import OtpScreen from '@screens/OnboardingScreen/OtpScreen';
 import CreatePassword from '@screens/OnboardingScreen/CreatePassword';
 import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
+import NotificationScreen from '@screens/NotificationScreen';
 
 const Stack = createStackNavigator();
 
@@ -39,6 +40,10 @@ export default function StackNavigation({navigationRef}) {
         <Stack.Screen
           name={NAVIGATION_SCREENS.CREATE_PASSWORD}
           component={CreatePassword}
+        />
+        <Stack.Screen
+          name={NAVIGATION_SCREENS.NOTIFICATION}
+          component={NotificationScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

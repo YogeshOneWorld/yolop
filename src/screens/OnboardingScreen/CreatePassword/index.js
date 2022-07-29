@@ -92,9 +92,12 @@ const CreatePassword = ({navigation}) => {
           </Text>
         </View>
         <View style={styles.confirmModalButton}>
-          <Text style={styles.buttonText} onPress={onSuccess}>
-            Go to Homepage
-          </Text>
+          <View>
+            <Text style={styles.buttonText} onPress={onSuccess}>
+              Go to Homepage
+            </Text>
+            <View style={styles.borderBottom} />
+          </View>
         </View>
       </CustomAlert>
     </SafeAreaView>
