@@ -39,8 +39,14 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   buttonText: {
-    textDecorationLine: 'underline',
-    fontSize: FONTS.f18,
-    color: COLORS.black,
+    fontSize: FONTS.f15,
+    color: COLORS.darkText,
+    marginLeft: SPACING.sh6,
+  },
+  borderBottom: {
+    height: 1,
+    marginLeft: SPACING.sh6,
+    backgroundColor: COLORS.darkText,
+    marginTop: SPACING.sh2,
   },
 });

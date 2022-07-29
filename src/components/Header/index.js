@@ -1,6 +1,7 @@
 import {Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import styles from './styles';
+import {commonStyle} from '@utils/commonStyle';
 
 export default function Header({
   icon,
@@ -15,7 +16,14 @@ export default function Header({
       <TouchableOpacity style={styles.leftSideView} onPress={onBackIconPress}>
         {icon}
       </TouchableOpacity>
-      <Text style={[headingStyle, styles.centerView]}>{title}</Text>
+      <Text
+        style={[
+          headingStyle,
+          styles.centerView,
+          commonStyle.commonLargeHeading,
+        ]}>
+        {title}
+      </Text>
       <View style={styles.rightSideView}>{menubar}</View>
     </View>
   );

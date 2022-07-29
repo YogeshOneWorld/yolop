@@ -26,6 +26,11 @@ export const commonStyle = StyleSheet.create({
     textAlign: 'center',
     textDecorationLine: 'underline',
   },
+  commonLargeHeading: {
+    fontSize: FONTS.f29,
+    fontFamily: APP_FONTS.CircularStdMedium,
+    color: COLORS.secondaryBlack,
+  },
   centerText: {
     alignSelf: 'center',
     textAlign: 'center',

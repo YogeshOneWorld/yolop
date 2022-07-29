@@ -24,7 +24,8 @@ const LoginScreen = ({navigation}) => {
   const [passwordError, setPasswordError] = useState(false);
 
   const onButtonPress = () => {
-    dispatch(userLoginRequest('yogesh mandyal'));
+    // navigateTo(navigation, NAVIGATION_SCREENS.NOTIFICATION, 1, true);
+    navigateTo(navigation, NAVIGATION_SCREENS.NOTIFICATION);
   };
 
   return (
@@ -89,3 +90,20 @@ const LoginScreen = ({navigation}) => {
 };
 
 export default LoginScreen;
+
+// import {StyleSheet, Text, View} from 'react-native';
+// import {StripeProvider} from '@stripe/stripe-react-native';
+// import React from 'react';
+// import PaymentScreen from './stripe/PaymentScreen';
+
+// export default function LoginScreen() {
+//   const publishableKey = 'rsqwfsdywdwgdeghcghsgdhvgs';
+//   return (
+//     <StripeProvider
+//       publishableKey={publishableKey}
+//       merchantIdentifier="merchant.identifier">
+//       <Text>your app code </Text>
+//       <PaymentScreen />
+//     </StripeProvider>
+//   );
+// }
