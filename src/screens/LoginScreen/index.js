@@ -1,4 +1,4 @@
-import {SafeAreaView, Text, View, ScrollView} from 'react-native';
+import {SafeAreaView, Text, View, ScrollView, Image} from 'react-native';
 import React, {useState} from 'react';
 import styles from './styles';
 import Header from '@components/Header';
@@ -14,6 +14,9 @@ import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
 import {navigateTo} from '@utils/navigateTo';
 import {userLoginRequest} from './action';
 import {useDispatch} from 'react-redux';
+import Mail from '@assets/mail.svg';
+import PasswordLogo from '@assets/passwordLogo.svg';
+import Eye from '@assets/eye-off-sharp.svg';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -38,21 +41,22 @@ const LoginScreen = ({navigation}) => {
           <SignInLogo height={sizeToDp(304)} width={sizeToDp(263)} />
         </View>
         <CustomTextInput
-          label={'Email'}
-          icon
+          label={'Username'}
+          leftIcon={<Mail height={sizeToDp(22)} width={sizeToDp(22)} />}
           onChangeText={text => setEmail(text)}
-          placeholder="Username"
           value={email}
           error={emailError}
         />
 
         <CustomTextInput
           label={'Password'}
-          icon
+          leftIcon={<PasswordLogo height={sizeToDp(22)} width={sizeToDp(22)} />}
           onChangeText={text => setPassword(text)}
-          placeholder="Password"
           value={password}
           error={emailError}
+          isPassword
+          showPassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
+          hidePassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
         />
         <Row spaces style={styles.buttonStyle}>
           <Row>

@@ -15,6 +15,8 @@ import CustomAlert from '@components/AlertBox';
 import Success from '@assets/sucess_tick.svg';
 import {navigateTo} from '@utils/navigateTo';
 import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
+import PasswordLogo from '@assets/passwordLogo.svg';
+import Eye from '@assets/eye-off-sharp.svg';
 
 const CreatePassword = ({navigation}) => {
   const [password, setPassword] = useState('');
@@ -48,20 +50,28 @@ const CreatePassword = ({navigation}) => {
           </View>
           <CustomTextInput
             label={'Password'}
-            icon
             onChangeText={text => setPassword(text)}
-            placeholder="Password"
             value={password}
             error={passwordError}
+            leftIcon={
+              <PasswordLogo height={sizeToDp(22)} width={sizeToDp(22)} />
+            }
+            isPassword
+            showPassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
+            hidePassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
           />
 
           <CustomTextInput
             label={'Confirm Password'}
-            icon
             onChangeText={text => setConfirmPassword(text)}
-            placeholder="Confirm Password"
             value={ConfirmPassword}
             error={ConfirmPasswordError}
+            leftIcon={
+              <PasswordLogo height={sizeToDp(22)} width={sizeToDp(22)} />
+            }
+            isPassword
+            showPassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
+            hidePassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
           />
           <Row style={commonStyle.centerText}>
             <CheckBox

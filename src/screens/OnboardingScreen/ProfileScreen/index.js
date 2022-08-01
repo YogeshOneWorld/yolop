@@ -49,7 +49,6 @@ const RegisterProfile = ({navigation}) => {
           label={'First Name'}
           icon
           onChangeText={text => setEmail(text)}
-          placeholder="First Name"
           value={email}
           error={emailError}
         />
@@ -57,7 +56,6 @@ const RegisterProfile = ({navigation}) => {
           label={'Last Name'}
           icon
           onChangeText={text => setEmail(text)}
-          placeholder="Last Name"
           value={email}
           error={emailError}
         />
@@ -65,7 +63,6 @@ const RegisterProfile = ({navigation}) => {
           label={'Address'}
           icon
           onChangeText={text => setEmail(text)}
-          placeholder="Address"
           value={email}
           error={emailError}
         />
@@ -73,7 +70,6 @@ const RegisterProfile = ({navigation}) => {
           label={'City'}
           icon
           onChangeText={text => setEmail(text)}
-          placeholder="City"
           value={email}
           error={emailError}
         />
@@ -81,7 +77,6 @@ const RegisterProfile = ({navigation}) => {
           label={'Mobile'}
           icon
           onChangeText={text => setEmail(text)}
-          placeholder="Mobile"
           value={email}
           error={emailError}
         />

@@ -1,40 +1,36 @@
-import {View} from 'react-native';
-import React, {useState} from 'react';
+import {View, Text} from 'react-native';
+import React from 'react';
 import styles from './styles';
-import {TextInput} from 'react-native-paper';
-import {COLORS} from '@utils/colors';
+import {FloatingLabelInput} from 'react-native-floating-label-input';
+import CheckBox from '@assets/checkbox.svg';
 
 export default function CustomTextInput({
   label,
-  icon,
   onChangeText,
-  placeholder,
   value,
+  leftIcon,
+  rightIcon,
+  showPassword,
+  hidePassword,
+  isPassword,
   error,
-  right,
 }) {
   return (
-    <>
-      <TextInput
-        mode="outlined"
+    <View>
+      <FloatingLabelInput
         label={label}
         value={value}
+        containerStyles={styles.inputBox}
+        customLabelStyles={styles.customLabelStyles}
+        inputStyles={styles.inputStyles}
         onChangeText={onChangeText}
-        placeholder={placeholder}
-        style={styles.inputBox}
-        activeOutlineColor="black"
-        underlineColor="transparent"
-        left={icon}
-        right={right}
-        error={error}
-        theme={{
-          colors: {
-            placeholder: COLORS.primaryBlack,
-            text: COLORS.black,
-            underlineColor: 'transparent',
-          },
-        }}
+        isPassword={isPassword}
+        leftComponent={leftIcon}
+        rightComponent={rightIcon}
+        customHidePasswordComponent={showPassword}
+        // customShowPasswordImage={showPassword}
+        customShowPasswordComponent={hidePassword}
       />
-    </>
+    </View>
   );
 }

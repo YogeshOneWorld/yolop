@@ -9,7 +9,6 @@ export default StyleSheet.create({
     backgroundColor: COLORS.primary,
   },
   contentContainer: {
-    flexGrow: 1,
     paddingHorizontal: SPACING.sw15,
     paddingVertical: SPACING.sh50,
   },
