@@ -11,13 +11,22 @@ import Row from '@components/Row';
 import {commonStyle} from '@utils/commonStyle';
 import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
 import {navigateTo} from '@utils/navigateTo';
+import Mail from '@assets/mail.svg';
+import PasswordLogo from '@assets/passwordLogo.svg';
+import Eye from '@assets/eye-off-sharp.svg';
+import UserLogo from '@assets/userLogo.svg';
 
 const SignUpScreen = ({navigation}) => {
+  const [fName, setFName] = useState('');
+  const [fNameError, setFNameError] = useState(false);
+  const [lName, setLName] = useState('');
+  const [lNameError, setLNameError] = useState(false);
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState(false);
-
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState(false);
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [confirmPasswordError, setConfirmPasswordError] = useState(false);
 
   const onButtonPress = () => {
     navigateTo(navigation, NAVIGATION_SCREENS.REGISTRATION);
@@ -35,24 +44,24 @@ const SignUpScreen = ({navigation}) => {
         <CustomTextInput
           label={'First Name'}
           icon
-          onChangeText={text => setEmail(text)}
-          placeholder="First Name"
-          value={email}
-          error={emailError}
+          onChangeText={text => setFName(text)}
+          leftIcon={<UserLogo height={sizeToDp(22)} width={sizeToDp(22)} />}
+          value={fName}
+          error={fNameError}
         />
         <CustomTextInput
           label={'Last Name'}
           icon
-          onChangeText={text => setPassword(text)}
-          placeholder="Last Name"
-          value={email}
-          error={emailError}
+          onChangeText={text => setLName(text)}
+          leftIcon={<UserLogo height={sizeToDp(22)} width={sizeToDp(22)} />}
+          value={lName}
+          error={lNameError}
         />
         <CustomTextInput
           label={'Email or Phone Number'}
           icon
-          onChangeText={text => setPassword(text)}
-          placeholder="Email or Phone Number"
+          onChangeText={text => setEmail(text)}
+          leftIcon={<Mail height={sizeToDp(22)} width={sizeToDp(22)} />}
           value={email}
           error={emailError}
         />
@@ -60,17 +69,23 @@ const SignUpScreen = ({navigation}) => {
           label={'Password'}
           icon
           onChangeText={text => setPassword(text)}
-          placeholder="Password"
-          value={email}
-          error={emailError}
+          value={password}
+          error={passwordError}
+          leftIcon={<PasswordLogo height={sizeToDp(22)} width={sizeToDp(22)} />}
+          isPassword
+          showPassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
+          hidePassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
         />
         <CustomTextInput
           label={'Confirm Password'}
           icon
-          onChangeText={text => setPassword(text)}
-          placeholder="Confirm Password"
-          value={email}
-          error={emailError}
+          onChangeText={text => setConfirmPassword(text)}
+          value={confirmPassword}
+          error={confirmPasswordError}
+          leftIcon={<PasswordLogo height={sizeToDp(22)} width={sizeToDp(22)} />}
+          isPassword
+          showPassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
+          hidePassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
         />
 
         <Button size={'large'} text={'Sign Up'} onPress={onButtonPress} />

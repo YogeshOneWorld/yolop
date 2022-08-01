@@ -45,7 +45,6 @@ export default function ExampleScreen({navigation}) {
           label={email}
           icon={myIcon1}
           onChangeText={text => setEmail(text)}
-          placeholder="name"
           value={email}
           error={emailError}
         />

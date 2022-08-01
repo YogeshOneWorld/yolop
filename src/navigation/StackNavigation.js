@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+// import {createStackNavigator} from '@react-navigation/stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LoginScreen from '@screens/LoginScreen';
 import RegisterProfile from '@screens/OnboardingScreen/ProfileScreen';
 import SignUpScreen from '@screens/OnboardingScreen/SignupScreen';
@@ -10,7 +11,7 @@ import CreatePassword from '@screens/OnboardingScreen/CreatePassword';
 import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
 import NotificationScreen from '@screens/NotificationScreen';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function StackNavigation({navigationRef}) {
   return (
