@@ -19,4 +19,18 @@ export default StyleSheet.create({
     width: HEIGHT.h144,
     borderRadius: HEIGHT.h144 / 2,
   },
+  modalHeading: {
+    fontSize: FONTS.f18,
+    color: COLORS.black,
+    fontFamily: APP_FONTS.CircularStdBold,
+    paddingLeft: SPACING.sw15,
+    marginBottom: SPACING.sh15,
+  },
+  modelText: {
+    fontSize: FONTS.f15,
+    color: COLORS.primaryBlack,
+    marginVertical: SPACING.sh6,
+    paddingLeft: SPACING.sw20,
+    fontFamily: APP_FONTS.CircularStdBook,
+  },
 });

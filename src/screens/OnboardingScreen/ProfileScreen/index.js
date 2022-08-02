@@ -1,28 +1,72 @@
-import {ScrollView, SafeAreaView, Image} from 'react-native';
-import React, {useState} from 'react';
+import {ScrollView, SafeAreaView, Image, Text, View} from 'react-native';
+import React, {useState, useCallback} from 'react';
 import styles from './styles';
 import Header from '@components/Header';
 import BackIcon from '@assets/backIcon.svg';
 import {sizeToDp} from '@utils/';
 import UserImage from '@components/UserImage';
-import {userImg} from '@assets/';
 import EditIcon from '@assets/editIcon.svg';
 import {COLORS} from '@utils/colors';
 import CustomTextInput from '@components/TextInput';
 import Button from '@components/Button';
 import {navigateTo} from '@utils/navigateTo';
 import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import CustomAlert from '@components/AlertBox';
 
 const RegisterProfile = ({navigation}) => {
-  const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState(false);
+  const [fName, setFName] = useState('');
+  const [fNameError, setFNameError] = useState(false);
+  const [lName, setLName] = useState('');
+  const [lNameError, setLNameError] = useState(false);
+  const [address, setAddress] = useState('');
+  const [addressError, setAddressError] = useState(false);
+  const [city, setCity] = useState('');
+  const [cityError, setCityError] = useState(false);
+  const [mobile, setMobile] = useState('');
+  const [mobileError, setMobileError] = useState(false);
 
-  const [password, setPassword] = useState('');
-  const [passwordError, setPasswordError] = useState(false);
+  const [response, setResponse] = useState();
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const onImageSelect = () => {
+    setIsModalVisible(!isModalVisible);
+  };
+
+  const onPressCamera = useCallback(type => {
+    setIsModalVisible(false);
+    const options = {
+      maxWidth: 300,
+      maxHeight: 550,
+      quality: 1,
+      saveToPhotos: true,
+      includeBase64: true,
+    };
+    if (type === 'capture') {
+      setIsModalVisible(false);
+      launchCamera(options, response => {
+        console.log('Response = ', response);
+        if (response.didCancel) {
+          return;
+        }
+        setResponse(response);
+      });
+    } else {
+      setIsModalVisible(false);
+      launchImageLibrary(options, response => {
+        console.log('Response = ', response);
+        if (response.didCancel) {
+          return;
+        }
+        setResponse(response);
+      });
+    }
+  }, []);
 
   const onButtonPress = () => {
     navigateTo(navigation, NAVIGATION_SCREENS.LOGIN);
   };
+
   return (
     <SafeAreaView style={styles.container}>
       <Header
@@ -34,7 +78,12 @@ const RegisterProfile = ({navigation}) => {
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}>
         <UserImage
-          icon={<Image source={userImg} style={styles.userLogo} />}
+          icon={
+            response?.assets &&
+            response?.assets.map(({uri}) => (
+              <Image source={{uri: uri}} style={styles.userLogo} />
+            ))
+          }
           editIcon={
             <EditIcon
               height={sizeToDp(17)}
@@ -43,44 +92,62 @@ const RegisterProfile = ({navigation}) => {
             />
           }
           editIconbgColor="#000"
+          onEditImage={onImageSelect}
         />
 
         <CustomTextInput
           label={'First Name'}
           icon
-          onChangeText={text => setEmail(text)}
-          value={email}
-          error={emailError}
+          onChangeText={text => setFName(text)}
+          value={fName}
+          error={fNameError}
         />
         <CustomTextInput
           label={'Last Name'}
           icon
-          onChangeText={text => setEmail(text)}
-          value={email}
-          error={emailError}
+          onChangeText={text => setLName(text)}
+          value={lName}
+          error={lNameError}
         />
         <CustomTextInput
           label={'Address'}
           icon
-          onChangeText={text => setEmail(text)}
-          value={email}
-          error={emailError}
+          onChangeText={text => setAddress(text)}
+          value={address}
+          error={addressError}
         />
         <CustomTextInput
           label={'City'}
           icon
-          onChangeText={text => setEmail(text)}
-          value={email}
-          error={emailError}
+          onChangeText={text => setCity(text)}
+          value={city}
+          error={cityError}
         />
         <CustomTextInput
           label={'Mobile'}
           icon
-          onChangeText={text => setEmail(text)}
-          value={email}
-          error={emailError}
+          onChangeText={text => setMobile(text)}
+          value={mobile}
+          error={mobileError}
         />
         <Button size={'large'} text={'Save Changes'} onPress={onButtonPress} />
+
+        <CustomAlert isVisibleModal={isModalVisible}>
+          <Text style={styles.modalHeading}>Select Image!</Text>
+          <View style={styles.modalTitle}>
+            <Text
+              style={styles.modelText}
+              onPress={() => onPressCamera('capture')}>
+              TakePhoto
+            </Text>
+            <Text style={styles.modelText} onPress={onPressCamera}>
+              Choose from library
+            </Text>
+            <Text style={styles.modelText} onPress={onImageSelect}>
+              Cancel
+            </Text>
+          </View>
+        </CustomAlert>
       </ScrollView>
     </SafeAreaView>
   );
