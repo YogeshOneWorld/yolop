@@ -2,7 +2,7 @@ import React from 'react';
 import {Dimensions, PixelRatio} from 'react-native';
 import {fetch} from '@react-native-community/netinfo';
 import StaticSafeAreaInsets from 'react-native-static-safe-area-insets';
-import SnackBarService from '@services/SnackBarService';
+// import SnackBarService from '@services/SnackBarService';
 
 let screenWidth = Dimensions.get('window').width;
 let screenHeight = Dimensions.get('window').height;
@@ -43,7 +43,8 @@ export const isValidEmail = emailAddress => {
 };
 
 export const showInternetError = () => {
-  SnackBarService.show('internet is not working');
+  // SnackBarService.show('internet is not working');
+  alert('internet is not working');
 };
 
 export const withNetConnection =

@@ -1,7 +1,6 @@
-
-import { COLORS } from "@utils/colors";
-import { SPACING } from "@utils/constant";
-import { StyleSheet } from "react-native";
+import {COLORS} from '@utils/colors';
+import {SPACING} from '@utils/constant';
+import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {

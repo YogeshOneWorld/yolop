@@ -13,4 +13,5 @@ export const COLORS = {
   lightText: '#979797',
   darkText: '#2B2A2A',
   gray: '#DCDCDC',
+  red: '#FF5733',
 };

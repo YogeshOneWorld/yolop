@@ -5,9 +5,10 @@ import {
   USER_TYPED_SOMETHING,
 } from './type';
 
-export const userLoginRequest = user => ({
+export const userLoginRequest = ({data, navigation}) => ({
   type: USER_LOGIN_REQUEST,
-  user,
+  data,
+  navigation,
 });
 
 export const userLoginSuccess = data => ({

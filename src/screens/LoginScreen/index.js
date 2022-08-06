@@ -1,4 +1,4 @@
-import {SafeAreaView, Text, View, ScrollView, Image} from 'react-native';
+import {SafeAreaView, ScrollView, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import styles from './styles';
 import Header from '@components/Header';
@@ -17,6 +17,10 @@ import {useDispatch} from 'react-redux';
 import Mail from '@assets/mail.svg';
 import PasswordLogo from '@assets/passwordLogo.svg';
 import Eye from '@assets/eye-off-sharp.svg';
+import LoaderService from '@services/LoaderService';
+import {isValidEmail} from '@utils/';
+import ErrorText from '@components/ErrorText';
+import SnackBarService from '@services/SnackBarService';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -27,8 +31,21 @@ const LoginScreen = ({navigation}) => {
   const [passwordError, setPasswordError] = useState(false);
 
   const onButtonPress = () => {
-    // navigateTo(navigation, NAVIGATION_SCREENS.NOTIFICATION, 1, true);
-    navigateTo(navigation, NAVIGATION_SCREENS.NOTIFICATION);
+    let data = {
+      email: email,
+      password: password,
+    };
+    switch (true) {
+      case isValidEmail(email):
+        LoaderService.show();
+        SnackBarService.show('success');
+        dispatch(userLoginRequest({data, navigation}));
+        break;
+      default:
+        LoaderService.hide();
+        setEmailError(true);
+        break;
+    }
   };
 
   return (
@@ -47,17 +64,19 @@ const LoginScreen = ({navigation}) => {
           value={email}
           error={emailError}
         />
+        {emailError && <ErrorText value={'invalid email address'} />}
 
         <CustomTextInput
           label={'Password'}
           leftIcon={<PasswordLogo height={sizeToDp(22)} width={sizeToDp(22)} />}
           onChangeText={text => setPassword(text)}
           value={password}
-          error={emailError}
+          error={passwordError}
           isPassword
           showPassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
           hidePassword={<Eye height={sizeToDp(22)} width={sizeToDp(22)} />}
         />
+        {emailError && <ErrorText value={'invalid password'} />}
         <Row spaces style={styles.buttonStyle}>
           <Row>
             <CheckBox

@@ -538,8 +538,6 @@ PODS:
     - React
   - RNSVG (12.4.3):
     - React-Core
-  - RNVectorIcons (9.2.0):
-    - React-Core
   - SocketRocket (0.6.0)
   - Stripe (22.5.1):
     - Stripe/Stripe3DS2 (= 22.5.1)
@@ -637,7 +635,6 @@ DEPENDENCIES:
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNStaticSafeAreaInsets (from `../node_modules/react-native-static-safe-area-insets`)
   - RNSVG (from `../node_modules/react-native-svg`)
-  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - "stripe-react-native (from `../node_modules/@stripe/stripe-react-native`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -765,8 +762,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-static-safe-area-insets"
   RNSVG:
     :path: "../node_modules/react-native-svg"
-  RNVectorIcons:
-    :path: "../node_modules/react-native-vector-icons"
   stripe-react-native:
     :path: "../node_modules/@stripe/stripe-react-native"
   Yoga:
@@ -843,7 +838,6 @@ SPEC CHECKSUMS:
   RNScreens: 4a1af06327774490d97342c00aee0c2bafb497b7
   RNStaticSafeAreaInsets: bb611be967ba27ced2fbf9aca0f067a786175ea6
   RNSVG: f3b60aeeaa81960e2e0536c3a9eef50b667ef3a9
-  RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   Stripe: 2b2decd03146e08a350960966d41f3028c2eac29
   stripe-react-native: 3bf9f714854607ac7e26f911bc204c0f21c96f9f

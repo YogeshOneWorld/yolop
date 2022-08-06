@@ -11,7 +11,6 @@ import CustomTextInput from '@components/TextInput';
 import MailIcon from '@assets/mailbox.svg';
 import Button from '@components/Button';
 import ProfileBox from '@components/ProfileBox';
-import Icons from 'react-native-vector-icons/FontAwesome5';
 import UserImage from '@components/UserImage';
 // import Person from '@assets/person.svg'
 import Person from '@assets/user.svg';
@@ -22,7 +21,6 @@ import {PROFILEData} from '@mock/ProfileData';
 import CustomAlert from '@components/AlertBox';
 // import { PROFILEDa } from "@m"
 
-const myIcon1 = <Icons name={'envelope'} size={30} color="#000" />;
 export default function ExampleScreen({navigation}) {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState(false);
@@ -43,7 +41,6 @@ export default function ExampleScreen({navigation}) {
       <View style={{paddingHorizontal: SPACING.sw15}}>
         <CustomTextInput
           label={email}
-          icon={myIcon1}
           onChangeText={text => setEmail(text)}
           value={email}
           error={emailError}
