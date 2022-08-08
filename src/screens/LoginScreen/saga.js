@@ -6,18 +6,17 @@ import {NAVIGATION_SCREENS} from '@utils/navigationScreen';
 import SnackBarService from '@services/SnackBarService';
 
 const sleep = sec => {
-  return new Promise(resolve => setTimeout(resolve, sec * 1000));
+  return new Promise(resolve => setTimeout(resolve, sec * 500));
 };
 
 function* loginRequest({data, navigation}) {
   try {
-    yield sleep(2);
-    LoaderService.hide();
-    console.log('email saga success', data, '======', navigation);
+    yield sleep(0.1);
+    yield LoaderService.hide();
     if (data.email && data.password) {
       // navigateTo(navigation, NAVIGATION_SCREENS.NOTIFICATION, 1, true);
-      navigateTo(navigation, NAVIGATION_SCREENS.NOTIFICATION);
-      SnackBarService.show('Success');
+      yield navigateTo(navigation, NAVIGATION_SCREENS.DRAWERSCREEN);
+      yield SnackBarService.show('Success');
     } else {
       SnackBarService.show('fail');
     }

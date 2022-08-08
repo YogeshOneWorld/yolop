@@ -35,17 +35,18 @@ const LoginScreen = ({navigation}) => {
       email: email,
       password: password,
     };
-    switch (true) {
-      case isValidEmail(email):
-        LoaderService.show();
-        SnackBarService.show('success');
-        dispatch(userLoginRequest({data, navigation}));
-        break;
-      default:
-        LoaderService.hide();
-        setEmailError(true);
-        break;
-    }
+    dispatch(userLoginRequest({data, navigation}));
+    // switch (true) {
+    //   case isValidEmail(email):
+    //     LoaderService.show();
+    //     SnackBarService.show('success');
+    //     dispatch(userLoginRequest({data, navigation}));
+    //     break;
+    //   default:
+    //     LoaderService.hide();
+    //     setEmailError(true);
+    //     break;
+    // }
   };
 
   return (

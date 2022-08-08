@@ -13,9 +13,11 @@ export default StyleSheet.create({
   customLabelStyles: {
     colorFocused: COLORS.darkText,
     fontSizeFocused: FONTS.f12,
+    fontSizeBlurred: FONTS.f15,
   },
   inputStyles: {
     color: COLORS.darkText,
     paddingHorizontal: SPACING.sw10,
+    fontSize: FONTS.f15,
   },
 });
